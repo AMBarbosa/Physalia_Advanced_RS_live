@@ -133,3 +133,10 @@ p2 <- ggplot(tabout, aes(x=class, y=y2006, color = class)) +
 
 
 p1 + p2
+
+
+# PCA ####
+
+sentdol <- im.import("sentinel.dolomites")
+
+im.pca(sentdol)
