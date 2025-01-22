@@ -1,7 +1,7 @@
 library(sdm)
 # library(raster)  # no longer needed - use terra instead
 library(terra)
-# library(viridis)  # viridis is now the default terra palette
+# library(viridis)  # not needed here - viridis is now the default terra palette
 
 
 file <- system.file("external/species.shp", package="sdm") 
@@ -30,26 +30,31 @@ lst <- list.files(path=path,pattern='asc$',full.names = T) #
 # stack
 
 # preds <- stack(lst)
-
 preds <- rast(lst)
 
 
 
 # plot predictors and occurrences
 
+head(species)
+
+occ <- subset(species, species$Occurrence == 1)
+
+
 names(preds)
 
+
 plot(preds$elevation, main="elevation")
-points(species[species$Occurrence == 1,])
+points(occ)
 
 plot(preds$temperature, main="temperature")
-points(species[species$Occurrence == 1,])
+points(occ)
 
 plot(preds$precipitation, main="precipitation")
-points(species[species$Occurrence == 1,])
+points(occ)
 
 plot(preds$vegetation, main="vegetation")
-points(species[species$Occurrence == 1,])
+points(occ)
 
 
 # model
@@ -74,4 +79,4 @@ p1 <- predict(m1, newdata=preds)
 
 plot(p1)
 
-points(species[species$Occurrence == 1,])
+points(occ)
