@@ -1,0 +1,40 @@
+library(imageRy)
+library(hexbin)
+
+
+grep("Sentinel", im.list(), val=T)
+
+ndvi <- im.import("Sentinel2_NDVI_2020")
+
+plot(ndvi)
+
+plot(ndvi[[1]], ndvi[[3]])
+abline(0, 1, col = "red")
+
+
+grep("dolomites", im.list(), val=T)
+
+dol <- im.import("sentinel.dolomites")
+
+plot(dol[[1]], dol[[2]])
+abline(0, 1, col = "red")
+
+
+
+# translate to data frame
+
+dol1 <- dol[[1]]
+dol2 <- dol[[2]]
+
+dol1d <- as.data.frame(dol1)
+dol2d <- as.data.frame(dol2)
+
+head(dol1d)
+
+hbin <- hexbin(dol1d[[1]], dol2d[[1]], xbins = 40)  # try also xbins=10
+
+hbin
+
+
+# x11()
+plot(hbin)  # use x11() if not OK
