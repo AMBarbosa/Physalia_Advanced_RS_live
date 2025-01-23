@@ -1,0 +1,146 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{markdown}
+% \usepackage{tcolorbox}
+
+
+% to change line interspacing for submitting to journals:
+% \renewcommand{\baselinestretch}{2}
+
+\title{My LaTeX doc from Physalia RS course}
+\author{A. Marcia Barbosa}
+% \date{}
+% if you don't provide or comment-out the \date{} argument, the document will show the computer date
+% if you provide an empty \date{} argument, it will not appear
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents{}
+
+\begin{abstract}
+\noindent Just read the whole paper, it's not that long. I'd have chatGPT write me an abstract, but I can't be bothered to do even that.
+\end{abstract}
+
+
+\section{Introduction}
+Intro... Certainly...
+
+\begin{figure}
+    \centering    \includegraphics[width=0.4\linewidth]{flare_las_2006347_lrg.jpg}
+    \caption{Solar flare. Look at that!}
+    \label{fig:flare}
+\end{figure}
+
+Another intro pgph... Certainly...
+
+\noindent Non-indented intro pgph... Certainly...
+
+We will see in section \ref{sec:methods} how to compute this.
+
+\section{Methods}\label{sec:methods}
+
+The code was something ike:
+
+\begin{markdown}
+
+```r
+library(terra)
+obj <- vect(c(1, 3)
+```
+\end{markdown}
+
+
+The algorithm was based on the following steps:
+
+\begin{itemize}
+    \item Gathering data
+    \item Cleaning data
+    \item Analysing data
+\end{itemize}
+
+And now the same but with numbering:
+
+\begin{enumerate}
+    \item Gathering data
+    \item Cleaning data
+    \item Analysing data
+\end{enumerate}
+
+
+\subsection{Formulas}
+
+In this paper, we used the formula of force by Newton, represented in Equation \ref{eq:newton}. And another more complex equation \ref{eq:complicadona} for show off. 
+
+\begin{equation}
+%F = \frac{G \times{m_1m_2}} {d^2}
+F = G \times{ \frac{m_1} \times{m_2} {d^2}}
+\label{eq:newton}
+\end{equation}
+
+\begin{equation}
+    F = \sqrt[n]{G \times \frac{m_{13468} \times m_2}{r^{265756}}}
+    \label{eq:complicadona}
+\end{equation}
+
+
+\subsection{Model calculation}
+
+Models were computed with GLM, but they may not be right as I had a bump in my head (\ref{fig:galo}).
+
+\begin{figure}
+    \centering    \includegraphics[width=0.4\linewidth]{galoBarcelos.png}
+    \caption{Nem todos os galos de Barcelos são de barro! Este é de testa.}
+    \label{fig:galo}
+\end{figure}
+
+
+\subsection{Model evaluation}
+
+Models were evaluated with modEvA...
+
+\section{Results}
+
+\subsection{Selected variables}
+
+\subsection{Model convergence}
+
+\subsection{Model evaluation}
+
+Final results are shown in Figure \ref{fig:flare}
+
+\section{Discussion}
+
+Nothing much to discuss here, the conclusions are clear: you bump your head, you do a lot of nonsense. Nothing new, but still interesting nonetheless! See other papers for more sensible stuff \cite{Rocchini2018, Gallardo2024}.
+
+\begin{thebibliography}{999}
+\bibitem[Rocchini et al. (2018)]{Rocchini2018}
+Rocchini D., Garzón-López C.X., Barbosa A.M., Delucchi L., Olandi J.E., Marcantonio M., Bastin L. \& Wegmann M. (2018) GIS-based Data Synthesis and Visualization. In: Recknagel F. \& Michener W. (eds.), Ecological Informatics: Data Management and Knowledge Discovery, 3rd Edition, pp. 273-286. Springer Verlag
+
+\bibitem[Gallardo et al. (2024)]{Gallardo2024}
+Gallardo B., Bacher S., Barbosa A.M., Gallien L., González-Moreno P., Martínez-Bolea V., Sorte C., Vimercati G. \& Vilà M. (2024) Risks posed by invasive species to the provision of ecosystem services in Europe. Nature Communications, 15: 2631
+\end{thebibliography}
+
+
+% add a horizontal line:
+\hline
+
+%\newpage
+
+\smallskip
+%\bigskip
+
+\textbf{Box 1 - Steps to perform the analysis}
+\begin{itemize}
+\item blabla1
+\item blabla2
+\end{itemize}
+
+
+
+
+\end{document}
