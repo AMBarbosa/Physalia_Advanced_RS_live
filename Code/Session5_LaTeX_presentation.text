@@ -1,0 +1,63 @@
+\documentclass{beamer}
+\usepackage{graphicx} % Required for inserting images
+
+% \usetheme{AnnArbor}
+% \usecolortheme{spruce}
+
+% \usetheme{Frankfurt}
+% \usecolortheme{dove}
+
+\usetheme{Bergen}
+\usecolortheme{wolverine}
+
+\title{LaTeX presentation Physalia RS course}
+
+\author{A. Marcia Barbosa}
+% \date{January 2025}
+
+\institute{Talk held at: \\
+\bigskip
+\includegraphics[width=0.5\linewidth]{vaca_arvore.jpg}
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+\begin{frame}{My first LaTeX slide!}
+    This is my first slide in LaTeX. So don't expect much!
+\end{frame}
+
+\begin{frame}{My second LaTeX slide}
+Itemizing is done by:
+    \begin{itemize}
+        \item Put a function
+        \item \pause Put items
+        \item \pause End function
+    \end{itemize}
+\end{frame}
+
+
+\section{Methods}
+
+\begin{frame}{Showing a formula in a presentation}
+    For analysis, we used the Shannon formula accounting for proportions.
+    \begin{equation}
+        H = \sum p \times log_2(p)
+    \end{equation}
+\end{frame}
+
+
+\section{Results}
+
+\begin{frame}{Output}
+    \textbf{Here}'s what I saw:
+\begin{figure}
+        \centering        \includegraphics[width=0.3\linewidth]{vaca_arvore.jpg}   \includegraphics[width=0.3\linewidth]{flare_las_2006347_lrg.jpg}
+\end{figure}
+\end{frame}
+
+
+\end{document}
